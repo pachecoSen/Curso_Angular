@@ -1,3 +1,15 @@
 # -- Sublime Text ----------
 Proyect_Sublimen.sublime-project
 Proyect_Sublimen.sublime-workspace
+
+# -- Compiled Angular Output ----------
+curso/dist
+curso/tmp
+curso/out-tsc
+curso/dist/*
+curso/tmp/*
+curso/out-tsc/*
+
+# -- Dependencies de Angular ----------
+curso/node_modules
+curso/node_modules/*

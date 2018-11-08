@@ -6,3 +6,6 @@ npm install -g @angular/cli
 
 New Proyect Angular
 ng new my-app
+
+Start Serve Angular
+ng serve
