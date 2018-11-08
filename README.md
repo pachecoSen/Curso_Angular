@@ -1,11 +1,11 @@
 # Curso_Angular
 Curso de Angular 7
 
-Install Angular CLI
+Install Angular CLI:
 npm install -g @angular/cli
 
-New Proyect Angular
+New Proyect Angular:
 ng new my-app
 
-Start Serve Angular
+Start Serve Angular:
 ng serve
