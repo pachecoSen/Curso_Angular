@@ -2,16 +2,36 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 html{
-	background-color: #5d203c;
+	background-color: #272727;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 }
 body{
-	background-color: #2E2E2E;
-	width: 90%;
-	margin: 0 auto;
-	color: #F2F2F2;
+	width: 80%;
+	background-color: #DFE0F4;
+	margin: 0 auto !important;
 }
-h1, h2, p{
-	margin: 0;
+h1, h2, p, ul, li{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+h1{
+	font-size: 2em !important;
+}
+h2{
+	font-size: 1.6em !important;
+}
+p, ul, li{
+	font-size: 1em;
+}
+hr{
+    width: 70%;
+    margin: 1em auto;
+    border: 0.02em solid #363A91;
+}
+ul, li{
+	list-style: none;
+}
+ul strong, li strong{
+	font-size: 1.1em;
 }
