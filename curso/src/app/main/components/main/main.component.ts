@@ -21,33 +21,18 @@ export class MainComponent {
 	}
 
 	ngOnInit(){
-		this.hola(undefined);
-		this.hola(this.nombre);
-		this.adios();
-		this.adios(undefined);
-		this.adios(this.nombre);
-		this.persona('Drago').holaPersona();
-	}
+		var n_uno = 8;
+		var n_dos = 5;
 
-	persona(persona:string){
-		this.nombre = persona;
-
-		return this;
-	}
-
-	holaPersona(){
-		console.log(this.nombre);
-	}
-
-	hola(persona:string = 'anonimo'){
-		console.log('Hola' + persona);
-	}
-
-	adios(persona?:string){
-		if(persona){
-			console.log('Adios' + persona);	
-			 return false;
+		if(n_uno === 8){
+			var n_uno = 16;
+			let n_dos = 10;
+			console.log('Dentro de If');
+			console.log(n_uno);
+			console.log(n_dos);
 		}
-		console.log('Adios desconocido');	
+		console.log('Fuera de If');
+		console.log(n_uno);
+		console.log(n_dos);
 	}
 }
