@@ -14,13 +14,17 @@ export class MainComponent {
 
 	constructor(){
 		this.title = 'Componente Empleados';
-		this.empleado = new MainModel('Jose Pacheco', 24, true, ['Gerente']);
+		this.empleado = new MainModel('Jose Pacheco', 24, true, ['Gerente'],'c');
 		this.empleado_s = [
-			new MainModel('Ignacio Cruz', 24, true, ['Limpieza', 'Cosina']),
-			new MainModel('Ignacio Pacheco', 24, true, ['Recepcion', 'Seguridad']),
-			new MainModel('Jose Cruz', 24, true, ['Aistente General']),
+			new MainModel('Ignacio Cruz', 24, true, ['Limpieza', 'Cosina'],'c'),
+			new MainModel('Ignacio Pacheco', 24, false, ['Recepcion', 'Seguridad'],'m'),
+			new MainModel('Jose Cruz', 24, true, ['Aistente General'],'g'),
 		];
 	}
 
 	ngOnInit(){}
+
+	setStatus(estatus:boolean, index:number){
+		this.empleado_s[index].estatus = estatus;
+	}
 }

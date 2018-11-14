@@ -1,5 +1,23 @@
 <h2>{{title}}</h2>
-<h5>Nombre: <small>{{empleado.nombre}}</small></h5>
-<h5>Edad: <small>{{empleado.edad}}</small></h5>
-<h5>Estado: <small>{{empleado.estatus}}</small></h5>
-<h5>Materias <small>{{empleado.area}}</small></h5>
+<ul *ngFor = "let item of empleado_s; let i = index">
+	<li><h5>Nombre: </h5><p>{{item.nombre}}</p></li>
+	<li><h5>Edad: </h5><p>{{item.edad}}</p></li>
+	<li>
+		<h5 class = "click" (click) = "setStatus(!item.estatus, i)" >Estado: </h5>
+		<p *ngIf = "item.estatus === true" [ngStyle] = "{'background':'#009242','color':'#fff'}">Activo</p>
+		<p *ngIf = "item.estatus === false" [ngStyle] = "{'background':'#bb0404','color':'#fff'}">Bloqueado</p>
+	</li>
+	<li>
+		<h5>Area: </h5>
+		<ul *ngFor = "let iM of item.area">
+			<li>{{iM}}</li>
+		</ul>
+	</li>
+	<li [ngSwitch] = "item.talla">
+		<h5>Talla: </h5>
+		<p *ngSwitchCase="'c'">Chica</p>
+		<p *ngSwitchCase="'m'">Mediana</p>
+		<p *ngSwitchCase="'g'">Grande</p>
+		<p *ngSwitchDefault>Sin Talla</p>
+	</li>
+</ul>

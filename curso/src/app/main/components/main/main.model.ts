@@ -3,6 +3,7 @@ export class MainModel{
 		public nombre:string,
 		public edad:number,
 		public estatus:boolean,
-		public area:Array<String>
+		public area:Array<String>,
+		public talla:string
 	){}
 }
